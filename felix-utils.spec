@@ -7,7 +7,7 @@
 
 Name:             %{?scl_prefix}%{pkg_name}
 Version:          1.2.0
-Release:          5.10%{?dist}
+Release:          5.11%{?dist}
 Summary:          Utility classes for OSGi
 License:          ASL 2.0
 URL:              http://felix.apache.org
@@ -16,7 +16,7 @@ Source0:          http://archive.apache.org/dist/%{grp_name}/%{site_name}-%{vers
 
 BuildArch:        noarch
 
-BuildRequires:    %{?scl_prefix_java_common}maven-local
+BuildRequires:    %{?scl_prefix}maven-local
 BuildRequires:    %{?scl_prefix_java_common}javapackages-tools
 BuildRequires:    %{?scl_prefix}felix-osgi-compendium
 BuildRequires:    %{?scl_prefix}felix-osgi-core
@@ -65,6 +65,9 @@ set -e -x
 %doc LICENSE NOTICE
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 1.2.0-5.11
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 1.2.0-5.10
 - maven33 rebuild #2
 
